@@ -1,0 +1,14 @@
+Open-colors:
+https://yeun.github.io/open-color/
+
+Coolors:
+https://coolors.co/palettes/trending
+
+Ionicons:
+https://ionic.io/ionicons
+
+Heroicons:
+https://heroicons.com/
+
+Diffchecker:
+https://www.diffchecker.com/

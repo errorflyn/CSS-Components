@@ -1,0 +1,14 @@
+{
+  "name": "css-components",
+  "version": "1.0.0",
+  "description": "Reposition for CSS components",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Vesa Heinonen",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
