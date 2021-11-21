@@ -1,0 +1,88 @@
+/* Green colors
+
+ #51cf66
+ #8ce99a
+ #37b24d
+*/
+/* Orange colors
+ #ff922b
+ #ffc078
+ #f76707
+*/
+
+/* Blue colors
+ #339af0
+ #74c0fc
+ #1c7ed6
+*/
+
+/* Grey colors
+ #adb5bd
+ #dee2e6
+ #495057
+*/
+
+/* HTML */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #495057;
+  margin-top: 20rem;
+}
+
+/* GENERAL LAYOUT */
+
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+  color: red;
+}
+
+/* COMPONENTS */
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+
+.card--side {
+  background-color: orangered;
+  height: 50rem;
+  transition: all 0.8s;
+}
+
+.card:hover .card--side {
+  transform: rotateY(180deg);
+}
