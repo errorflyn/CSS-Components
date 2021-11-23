@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Rubik, sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #495057;
@@ -67,7 +67,7 @@ body {
   font-size: 4.4rem;
   line-height: 1.2;
   margin-bottom: 9.6rem;
-  color: red;
+  color: orange;
 }
 
 /* COMPONENTS */
@@ -75,14 +75,146 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  margin-bottom: 40rem;
 }
 
 .card--side {
-  background-color: orangered;
+  color: #000;
+  font-size: 2rem;
   height: 50rem;
-  transition: all 0.8s;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* hide element behind */
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 
-.card:hover .card--side {
+.card--side-front {
+  background-color: #fff;
+}
+
+.card--side-back {
   transform: rotateY(180deg);
+}
+
+.card--side-back-1 {
+  background-image: linear-gradient(to right bottom, #fff4e6, #ffe8cc, #ffd8a8);
+}
+
+.card:hover .card--side-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card--side-back {
+  transform: rotateY(0);
+}
+
+/* Front side */
+.card-picture {
+  background-size: cover;
+  height: 18rem;
+}
+
+.card-picture-1 {
+  background-image: url(img/card-1.jpg);
+}
+
+.card-heading {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: right;
+  color: #000;
+  position: absolute;
+  top: 17rem;
+  right: 2rem;
+  width: 75%;
+}
+
+.card-heading-span {
+  padding: 1rem 2rem;
+}
+
+.card-heading-span-1 {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.85),
+    rgba(173, 181, 189, 0.85)
+  );
+}
+
+.card-text {
+  margin-top: 5rem;
+  padding: 3rem;
+}
+
+.card-text ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-text li {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.card-text li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card-cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-content {
+  text-align: center;
+  color: #f76707;
+  margin-bottom: 8rem;
+}
+.card-content-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.card-content-value {
+  font-size: 6rem;
+  font-weight: 100;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+
+  /* Only necessary for the.btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* Put transition on original state */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn-cta {
+  border-radius: 9%;
+  background-color: #f76707;
+  color: #eee;
+  text-transform: uppercase;
 }
